@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Rully Iksan Risandy | Portfolio Futuristik</title>
+  <!-- Google Fonts: Poppins & Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- AOS Scroll Reveal (CDN) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../uts_rullyiksan/style.css">
+</head>
+<body>
+<div class="loader-wrapper" id="loader">
+  <div class="loader"></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="logo">RIR</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+  </div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero container" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Rully Iksan Risandy</h1>
+      <div class="tagline">Web Developer & UI/UX Enthusiast</div>
+      <p style="max-width: 500px;">Membangun pengalaman digital yang imersif dengan kode dan kreativitas. Futuristik & elegan.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" id="viewPortfolioBtn">View Portfolio</button>
+        <button class="btn btn-outline" id="contactMeBtn">Contact Me</button>
+      </div>
+      <div class="social-icons">
+        <a href="https://github.com/rullysansan88-source" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/rullyiksn6?igsh=MTl3dHpycnhnazR2eQ=="><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="hero-img floating">
+      <div class="profile-circle">
+        <img src="..//praktikum.2/asset/Rully.jpg" alt="profile">
+      </div>
+    </div>
+  </section>
+
+  <!-- About + Skills -->
+  <section id="about" data-aos="fade-right">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <p style="margin-bottom: 1rem;">saya Rully, mahasiswa Universitas Sebelas April, Fakultas Teknologi Informasi, Prodi Sistem Informasi Semester IVB.</p>
+          <p><i class="fas fa-map-marker-alt"></i> Sumedang, Indonesia | Remote</p>
+          <p><i class="fas fa-laptop-code"></i> Freelance & Full-time</p>
+        </div>
+        <div class="skill-card">
+          <h3>Keahlian Utama</h3>
+          <div class="skill-item" data-progress="90"><div class="skill-info"><span>HTML5</span><span>90%</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div></div>
+          <div class="skill-item" data-progress="85"><div class="skill-info"><span>CSS3 / Tailwind</span><span>85%</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div></div>
+          <div class="skill-item" data-progress="80"><div class="skill-info"><span>JavaScript</span><span>80%</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div></div>
+          <div class="skill-item" data-progress="75"><div class="skill-info"><span>UI/UX Design</span><span>75%</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div></div>
+          <div class="skill-item" data-progress="88"><div class="skill-info"><span>Responsive Design</span><span>88%</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-card" style="margin-top:2rem;">
+        <h3>Education Timeline</h3>
+        <ul class="timeline">
+          <li><i class="fas fa-graduation-cap"></i> 2024 - Sekarang: UNIVERSITAS SEBELAS APRIL - Sistem informasi</li>
+          <li><i class="fas fa-certificate"></i> 2022: SMA 2 CIMALAKA</li>
+          
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Filter & Gallery -->
+  <section id="portfolio" data-aos="zoom-in">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="uiux">UI/UX</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Let's Connect</h2>
+      <div class="contact-wrapper">
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group"><input type="text" id="name" placeholder="Nama Lengkap" required></div>
+            <div class="form-group"><input type="email" id="email" placeholder="Email" required></div>
+            <div class="form-group"><textarea rows="4" id="message" placeholder="Pesan ..." required></textarea></div>
+            <button type="submit" id="submitBtn">Kirim Pesan</button>
+            <div id="formFeedback" style="margin-top:12px; font-size:0.9rem;"></div>
+          </form>
+        </div>
+        <div class="skill-card" style="flex:0.6;">
+          <h3>Informasi Kontak</h3>
+          <p><i class="fas fa-envelope"></i> rullyiksan19@gmail.com</p>
+          <p><i class="fas fa-phone-alt"></i> +62 812 3456 7890</p>
+          <div class="social-icons" style="margin-top:20px;"><a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© 2026 Rully iksan — Futuristic Portfolio. All rights reserved.</p>
+  <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+</footer>
+
+<div class="lightbox" id="lightbox"><span class="close-lightbox">&times;</span><img class="lightbox-content" id="lightboxImg" src="" alt="preview"></div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../uts_rullyiksan/script.js"></script>
+</body>
+</html>
